@@ -20,6 +20,18 @@ export const yarg = yargs(hideBin(process.argv))
     default: false,
     description: 'show multiplication table',
   })
+  .option('n', {
+      alias: 'name',
+      type: 'string',
+      default: 'multiplication-table',
+      describe : 'File Name',
+  })
+  .option('d', {
+      alias: 'destination',
+      type: 'string',
+      default: 'outputs',
+      describe: 'File Destination',
+  })
   .check((argv, options) => {
     if (isNaN(argv.b)) {
       throw new Error('Error: base must be a number');

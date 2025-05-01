@@ -15,9 +15,9 @@ import { ServerApp } from "./presentation/server-app"
 
 async function main() {
 
-   const { b:base, l:limit, s:show } = yarg
+   const { b:base, l:limit, s:show, n:fileName, d:fileDestination } = yarg
 
-  ServerApp.run({base , limit, show})
+  ServerApp.run({base , limit, show, fileName, fileDestination})
 
     
 }
